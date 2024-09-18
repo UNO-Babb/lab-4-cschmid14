@@ -1,5 +1,5 @@
 #TurtleGraphics.py
-#Name: Carter
+#Name: Carter S
 #Date:
 #Assignment:
 
