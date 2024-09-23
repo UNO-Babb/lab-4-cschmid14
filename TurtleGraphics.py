@@ -1,7 +1,7 @@
 #TurtleGraphics.py
 #Name: Carter S 
-#Date:
-#Assignment: 
+#Date:9/22/2024
+#Assignment: Turtle Graphics
 
 import turtle #needed generally but not in CodeHS
 hideturtle() #hides the default turtle in CodeHS
@@ -28,6 +28,8 @@ def fillCorner(myTurtle, corner):
         
     elif corner == 4:
         myTurtle.forward(100)
+        myTurtle.right(90)
+        myTurtle.forward(50)
         
         
         
@@ -42,13 +44,16 @@ def fillCorner(myTurtle, corner):
     
 def squaresInSquares(myTurtle, num):
     size = 10
+    x = 0
+    y = 0
     for i in range(num):
         drawSquare(myTurtle, size)
         size = size + 20
-        myTurtle.right(180)
-        myTurtle.forward(10)
-        myTurtle.right(90)
-        
+        x = x - 10
+        y = y + 10
+        myTurtle.penup()
+        myTurtle.setposition(x,y)
+        myTurtle.pendown()
     
     
     
@@ -59,13 +64,13 @@ def main():
     #drawSquare(myTurtle, 100)
     
     #drawPolygon(myTurtle, 6) #draws a pentagon
-    # drawPolygon(myTurtle, 8) #draws an octogon
+    #drawPolygon(myTurtle, 8) #draws an octogon
 
-  # fillCorner(myTurtle,4)#draws a square with top right corner filled in.
-    # fillCorner(myTurtle, 3) #draws a square bottom left corner filled in.
+    #fillCorner(myTurtle,4)#draws a square with top right corner filled in.
+    #fillCorner(myTurtle, 3) #draws a square bottom left corner filled in.
 
-   squaresInSquares(myTurtle, 5) #draws 5 concentric squares
-    # squaresInSquares(myTurtle, 3) #draws 3 concentric squares
+    #squaresInSquares(myTurtle, 5) #draws 5 concentric squares
+    #squaresInSquares(myTurtle, 3) #draws 3 concentric squares
 
 
 main()
